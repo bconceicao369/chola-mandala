@@ -1,0 +1,13 @@
+# Private source material — NEVER publish (guru's dossier + wife's audio note)
+source/
+
+# Raw extracted images (working library, not used by the site)
+assets/extracted/
+
+# Working/preview artifacts
+preview-full-page.png
+contact-sheet.png
+
+# OS / editor cruft
+.DS_Store
+*.log

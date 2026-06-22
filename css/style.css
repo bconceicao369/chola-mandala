@@ -144,7 +144,7 @@ h1,h2,h3,h4,.display{font-family:"Cinzel",Georgia,serif;font-weight:600;line-hei
 
 /* ============ STATS BAR ============ */
 .stats{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
   max-width:var(--maxw);margin:-58px auto 0;position:relative;z-index:20;padding:0 26px;
 }
 .stat{

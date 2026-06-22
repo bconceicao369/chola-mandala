@@ -251,7 +251,7 @@ h1,h2,h3,h4,.display{font-family:"Cinzel",Georgia,serif;font-weight:600;line-hei
 .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 14px 10px;color:#fff;font-size:.8rem;background:linear-gradient(transparent,rgba(8,14,40,.85));font-family:"Cinzel",serif;letter-spacing:.04em}
 
 /* deities row */
-.deities{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.deities{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 .deity{text-align:center}
 .deity img{border-radius:12px;aspect-ratio:3/4;object-fit:cover;box-shadow:var(--shadow-sm);border:1px solid var(--line)}
 .deity b{display:block;margin-top:10px;font-family:"Cinzel",serif;font-size:.8rem;color:var(--royal);letter-spacing:.03em}

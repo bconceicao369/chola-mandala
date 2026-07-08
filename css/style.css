@@ -126,6 +126,12 @@ h1,h2,h3,h4,.display{font-family:"Cinzel",Georgia,serif;font-weight:600;line-hei
 .hp-name{position:absolute;z-index:2;left:50%;bottom:14px;transform:translateX(-50%);text-align:center;width:90%}
 .hp-name b{font-family:"Cinzel",serif;color:#fff;font-size:1.02rem;letter-spacing:.06em;display:block;text-shadow:0 2px 10px rgba(0,0,0,.6)}
 .hp-name small{display:block;color:var(--gold-bright);font-family:"Cinzel",serif;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;margin-top:2px}
+/* two portraits side by side */
+.hero-portrait.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:end;width:min(540px,92vw)}
+.hp-item{position:relative}
+.duo .hp-frame{width:100%;border-radius:160px 160px 16px 16px}
+.duo .hp-name b{font-size:.9rem}
+.duo .hp-name small{font-size:.56rem;letter-spacing:.2em}
 .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:var(--gold-bright);font-size:.66rem;letter-spacing:.3em;font-family:"Cinzel",serif;text-transform:uppercase;opacity:.8}
 .scroll-cue i{display:block;width:1px;height:34px;background:linear-gradient(var(--gold-bright),transparent);margin:8px auto 0;animation:cue 1.8s infinite}
 

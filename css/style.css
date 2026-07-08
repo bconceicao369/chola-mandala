@@ -265,9 +265,10 @@ h1,h2,h3,h4,.display{font-family:"Cinzel",Georgia,serif;font-weight:600;line-hei
 /* ============ PHILOSOPHY ============ */
 .philo{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
 .philo .pimg img{border-radius:var(--r);box-shadow:var(--shadow-md)}
-.philo blockquote{border-left:3px solid var(--gold);padding-left:22px;margin:22px 0;font-size:1.22rem;color:#fff;font-style:italic}
-.philo p{color:#cdd0ee;margin-bottom:1rem}
+.philo blockquote,.ppanel blockquote{border-left:3px solid var(--gold);padding-left:22px;margin:22px 0;font-size:1.22rem;color:#fff;font-style:italic}
+.philo p,.ppanel p{color:#cdd0ee;margin-bottom:1rem}
 .philo .ppanel{background:rgba(255,255,255,.05);border:1px solid rgba(230,196,94,.2);border-radius:var(--r);padding:30px}
+#philosophy .ppanel{background:rgba(255,255,255,.05);border:1px solid rgba(230,196,94,.2);border-radius:var(--r);padding:34px 38px}
 
 /* ============ PRESS ============ */
 .press img{border-radius:14px;box-shadow:var(--shadow-sm);border:1px solid var(--line);width:100%}

@@ -66,7 +66,7 @@
     counters.forEach(runCount);
   }
 
-  /* ---- contact form (front-end only; no backend yet) ---- */
+  /* ---- contact form (posts to FormSubmit, which emails the Committee) ---- */
   var form = document.getElementById('contactForm');
   var note = document.getElementById('formNote');
   if (form) {
@@ -80,10 +80,24 @@
         note.style.color = '#e6c45e';
         return;
       }
-      // Placeholder behaviour — wire to email/CRM when contact details are available.
-      note.textContent = 'Thank you, ' + name.split(' ')[0] + '. Your message has been received. 🙏';
-      note.style.color = '#e6c45e';
-      form.reset();
+      var btn = form.querySelector('button');
+      btn.disabled = true;
+      fetch('https://formsubmit.co/ajax/aradhyasushma20@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: name, email: email, _replyto: email,
+          subject: document.getElementById('fs').value.trim() || 'Message from the website',
+          message: msg, _subject: 'New message from soniagandhitrust.com'
+        })
+      }).then(function (r) { return r.json(); }).then(function (d) {
+        if (d.success === 'true' || d.success === true) {
+          note.textContent = 'Thank you, ' + name.split(' ')[0] + '. Your message has been received.';
+          form.reset();
+        } else { throw new Error('fail'); }
+      }).catch(function () {
+        note.textContent = 'Sorry, that did not send. Please email aradhyasushma20@gmail.com directly.';
+      }).then(function () { note.style.color = '#e6c45e'; btn.disabled = false; });
     });
   }
 
